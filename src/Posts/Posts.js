@@ -1,6 +1,5 @@
 import React from 'react';
-import {ApiData} from './apiData.js';
-
+/*
 
 //amend this to be the name of the first item in the json response
 const apiData = ApiData;
@@ -13,9 +12,21 @@ function IterateData() {
         const data = apiData[i];
         posts.push(data);
     }
+
+
+    return (
+        <div>
+            <ul>
+
+            </ul>
+        </div>
+
+    );
 }
 
 Console.log(ApiData);
 
 export const ListOfPosts = posts();
+
+*/
 
