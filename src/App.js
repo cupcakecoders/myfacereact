@@ -7,6 +7,7 @@ import { PostsPage } from './Posts/Posts';
 function App() {
   return (
     <div>
+    <div>
       <Router>
         <h1 className="logo">My Face</h1>
         <Switch>
@@ -15,6 +16,10 @@ function App() {
           </Route>
         </Switch>
       </Router>
+    </div>
+    <div>
+      <PostsPage/>
+    </div>
     </div>
 
     
