@@ -14,9 +14,17 @@ export function ListOfPosts() {
      if (!posts) {
          return <div>Loading api data</div>
      }
+
+     const postHtmlElements = [];
+     posts.forEach(postData => {
+            const post = <Post data={postData}/>
+            postHtmlElements.push(post);
+     });
+
      return (
          <ul>
-             {posts.map(postData => <Post data={postData}/>)}
+             {/* {posts.map(postData => <Post data={postData}/>)} */}
+             {postHtmlElements}
          </ul>
      )
 
