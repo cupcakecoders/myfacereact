@@ -8,6 +8,5 @@ export function PostsPage() {
             <h2>PostsPage</h2>
             <ListOfPosts/>
         </main>
-
     );
 }
