@@ -8,7 +8,7 @@ function App() {
   return (
     <div>
       <Router>
-        <h1>My Face Reactivate</h1>
+        <h1 className="logo">My Face</h1>
         <Switch>
           <Route exact path="/posts">
             <PostsPage/>

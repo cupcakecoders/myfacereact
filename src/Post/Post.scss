@@ -1,0 +1,31 @@
+.ul {
+    display: flex;
+}
+
+@mixin post-style {
+    flex-wrap: wrap;
+    background-color: lightgray;
+    margin: 10px;
+}
+
+.post {
+    @include post-style();
+}
+
+img.post-image {
+    @include post-style();
+    width: 300px;
+    height: auto;
+}
+
+h2 {
+    font-family: sans-serif;
+}
+
+h3 {
+    font-family: sans-serif;
+}
+
+p {
+    font-family: sans-serif;
+}
