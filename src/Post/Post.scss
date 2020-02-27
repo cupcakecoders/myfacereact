@@ -1,11 +1,13 @@
-.ul {
-    display: flex;
+*{
+    margin: 2px;
 }
-
 @mixin post-style {
-    flex-wrap: wrap;
     background-color: lightgray;
-    margin: 10px;
+    width: 300px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 5px;
 }
 
 .post {
@@ -14,18 +16,30 @@
 
 img.post-image {
     @include post-style();
-    width: 300px;
-    height: auto;
+    width: 280px;
 }
-
+    
 h2 {
     font-family: sans-serif;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    padding: 5px;
 }
 
 h3 {
     font-family: sans-serif;
+    padding: 10px;
+
 }
 
 p {
     font-family: sans-serif;
+    padding: 10px;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;  
+    flex-wrap: wrap;
+    padding: 0;
 }
