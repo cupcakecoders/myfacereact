@@ -1,14 +1,23 @@
 import React from 'react';
 import './App.scss';
-import { FetchApiData } from './apiData';
+import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import { PostsPage } from './Posts/Posts';
+
 
 function App() {
   return (
-
     <div>
-      <FetchApiData/>
+      <Router>
+        <h1>My Face Reactivate</h1>
+        <Switch>
+          <Route exact path="/posts">
+            <PostsPage/>
+          </Route>
+        </Switch>
+      </Router>
     </div>
 
+    
   );
 }
 
