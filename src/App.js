@@ -3,6 +3,7 @@ import './App.scss';
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import { PostsPage } from './Posts/Posts';
 import { SubscribeForm } from './Form/Form';
+import { UsersPage } from './Users/Users';
 
 
 function App() {
@@ -14,6 +15,11 @@ function App() {
           <Switch>
             <Route exact path="/posts">
               <PostsPage/>
+            </Route>
+          </Switch>
+          <Switch>
+          <Route exact path="/users">
+              <UsersPage/>
             </Route>
           </Switch>
         </Router>
