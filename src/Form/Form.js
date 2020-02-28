@@ -6,7 +6,6 @@ export function SubscribeForm() {
     const [lastName, setLastName] = useState("");
     const [username, setUsername] = useState("");
 
-
     // function createNewUser(event){
     //     setEmail(event.target.value);
     //}
@@ -27,11 +26,21 @@ export function SubscribeForm() {
             body: JSON.stringify(signupEmail), 
         })
         .then(response => response.json())
-        .then(data => alert(`Thanks ${data.firstName} for signing up!`));
+        .then(data => alert(`Thanks ${data.firstName} for signing up!`))
+        //.then(() => setEmail(''));
+        .then(resetForm);
     };
 
+
+    function resetForm(){
+        setFirstName('');
+        setLastName('');
+        setUsername('');
+        setEmail('');
+    }
+
     return (
-        <form id="new-user-form" onSubmit={handleSubmit}>
+        <form className="inline-form" onSubmit={handleSubmit}>
             <label>
                 Email: 
                 <input type="email" value={email} onChange={event => setEmail(event.target.value)}/>
