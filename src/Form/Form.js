@@ -8,9 +8,23 @@ export function SubscribeForm() {
     }
 
     function handleSubmit(event) {
-        alert("Thanks for signing up.");
         event.preventDefault();
-    }
+        const signupEmail = {
+            email: email,
+            firstName: "mike",
+            lastName: "walker",
+            username: "mike1"
+        };
+        fetch("https://localhost:5001/users/create", {
+            method: "POST",
+            headers: {
+                'Content-type': 'application/json',
+            },
+            body: JSON.stringify(signupEmail), 
+        })
+        .then(response => response.json())
+        .then(data => alert(`Thanks ${data.firstName} for signing up!`));
+    };
 
     return (
         <form onSubmit={handleSubmit}>
