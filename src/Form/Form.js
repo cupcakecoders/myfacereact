@@ -31,7 +31,7 @@ export function SubscribeForm() {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form id="new-user-form" onSubmit={handleSubmit}>
             <label>
                 Email: 
                 <input type="email" value={email} onChange={event => setEmail(event.target.value)}/>
